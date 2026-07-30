@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ética Digital | Navegando com Responsabilidade</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <header class="header">
+    <div class="logo">🌐 ÉticaDigital</div>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#pilares">Pilares</a>
+      <a href="#dilema">Dilema Interativo</a>
+    </nav>
+  </header>
+
+  <main id="conteudo-principal">
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <span class="badge">Consciência Digital</span>
+        <h1>O que significa ser ético no mundo online?</h1>
+        <p>A ética digital nos orienta a utilizar a tecnologia com responsabilidade, respeito, segurança e transparência. Escolhas virtuais têm impactos reais.</p>
+        <a href="#pilares" class="btn-primary">Explorar Pilares</a>
+      </div>
+    </section>
+
+    <section id="pilares" class="section">
+      <h2>Pilares Fundamentais</h2>
+      <p class="subtitle">Conceitos essenciais para a convivência saudável na rede.</p>
+
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon">🔒</div>
+          <h3>Privacidade & Dados</h3>
+          <p>Respeitar dados pessoais próprios e alheios. Ter consciência sobre consentimento e o uso responsável de informações digitais.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🤝</div>
+          <h3>Empatia & Respeito</h3>
+          <p>Combater o cyberbullying, o discurso de ódio e o cancelamento destrutivo. Lembre-se: há pessoas reais por trás de cada perfil.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🔍</div>
+          <h3>Veracidade</h3>
+          <p>Checar fontes antes de reencaminhar informações para evitar a propagação de desinformação e Fake News.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🤖</div>
+          <h3>IA Ética</h3>
+          <p>Compreender os impactos dos algoritmos, exigindo transparência, inclusão e neutralidade na tecnologia.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="dilema" class="section bg-alt">
+      <h2>Dilema Interativo</h2>
+      <p class="subtitle">Como você agiria nesta situação?</p>
+
+      <div class="interactive-box">
+        <p class="scenario"><strong>Cenário:</strong> Você recebe uma foto embaraçosa de um colega em um grupo de mensagens. Qual atitude tomar?</p>
+        <div class="options">
+          <button onclick="responderDilema(1)">Encaminho para outros amigos para rir.</button>
+          <button onclick="responderDilema(2)">Não compartilho e converso em privado com quem enviou.</button>
+          <button onclick="responderDilema(3)">Apenas ignoro e deixo o conteúdo no grupo.</button>
+        </div>
+        <div id="resultado-dilema" class="feedback hidden"></div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="accessibility-container">
+    <button id="access-btn" aria-label="Menu de acessibilidade" class="access-floating-btn">♿</button>
+
+    <div id="access-menu" class="access-menu hidden">
+      <h3>Acessibilidade</h3>
+      <hr />
+      <div class="access-group">
+        <label>Tamanho do Texto:</label>
+        <div class="btn-group">
+          <button onclick="alterarFonte(1)">A+</button>
+          <button onclick="alterarFonte(-1)">A-</button>
+          <button onclick="resetarFonte()">Reset</button>
+        </div>
+      </div>
+
+      <div class="access-group">
+        <label>Tema de Cores:</label>
+        <div class="btn-group">
+          <button onclick="mudarTema('light')">Claro</button>
+          <button onclick="mudarTema('dark')">Escuro</button>
+          <button onclick="mudarTema('high-contrast')">Contraste</button>
+        </div>
+      </div>
+
+      <div class="access-group">
+        <label>Leitor de Tela (Voz):</label>
+        <div class="btn-group">
+          <button onclick="lerPagina()">▶ Ler</button>
+          <button onclick="pararLeitura()">⏹ Parar</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <footer>
+    <p>© Ética Digital - Projeto interativo pronto para GitHub Pages</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
